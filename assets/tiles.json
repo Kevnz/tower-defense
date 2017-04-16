@@ -1,6 +1,6 @@
 {"frames": {
 
-"blackbrick.png":
+"blackbrick":
 {
 	"frame": {"x":2,"y":2,"w":16,"h":16},
 	"rotated": false,
@@ -8,7 +8,7 @@
 	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":16},
 	"sourceSize": {"w":16,"h":16}
 },
-"bluebrick.png":
+"bluebrick":
 {
 	"frame": {"x":2,"y":20,"w":16,"h":16},
 	"rotated": false,
@@ -16,7 +16,7 @@
 	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":16},
 	"sourceSize": {"w":16,"h":16}
 },
-"brownbrick.png":
+"brownbrick":
 {
 	"frame": {"x":2,"y":38,"w":16,"h":16},
 	"rotated": false,
@@ -24,7 +24,7 @@
 	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":16},
 	"sourceSize": {"w":16,"h":16}
 },
-"greenbrick.png":
+"greenbrick":
 {
 	"frame": {"x":20,"y":2,"w":16,"h":16},
 	"rotated": false,
@@ -32,7 +32,7 @@
 	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":16},
 	"sourceSize": {"w":16,"h":16}
 },
-"greybrick.png":
+"greybrick":
 {
 	"frame": {"x":38,"y":2,"w":16,"h":16},
 	"rotated": false,
@@ -40,7 +40,7 @@
 	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":16},
 	"sourceSize": {"w":16,"h":16}
 },
-"redbrick.png":
+"redbrick":
 {
 	"frame": {"x":20,"y":20,"w":16,"h":16},
 	"rotated": false,
@@ -48,7 +48,7 @@
 	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":16},
 	"sourceSize": {"w":16,"h":16}
 },
-"whitebrick.png":
+"whitebrick":
 {
 	"frame": {"x":20,"y":38,"w":16,"h":16},
 	"rotated": false,
@@ -56,7 +56,7 @@
 	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":16},
 	"sourceSize": {"w":16,"h":16}
 },
-"yellowbrick.png":
+"yellowbrick":
 {
 	"frame": {"x":38,"y":20,"w":16,"h":16},
 	"rotated": false,
