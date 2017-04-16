@@ -1,6 +1,6 @@
 {
   "env": {
-    "browser": false,
+    "browser": true,
     "node": true,
     "mocha": true
   },
@@ -9,7 +9,8 @@
     ],
   "globals": {
     "game": true,
-    "Phaser": true
+    "Phaser": true,
+    "window": true
   },
   "rules" : {
     "comma-dangle": "off",
