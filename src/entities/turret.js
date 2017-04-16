@@ -29,18 +29,19 @@ class Turret {
   }
   fire() {
     if (game.time.now > this.bulletTime && this.target.alive) {
-      //  Grab the first bullet we can from the pool
       const bullet = this.bullets.getFirstExists(false);
       if (bullet) {
-        //  And fire it
-        bullet.reset(this.gun.x+2 , this.gun.y-2 );
-        bullet.body.velocity.x = -5;
-        bullet.rotation = game.physics.arcade.moveToObject(bullet, this.target );
-        this.bulletTime = game.time.now + 800;
+        bullet.reset(this.gun.x + 2 , this.gun.y - 2);
+        bullet.body.velocity.x = -4;
+        bullet.rotation = game.physics.arcade.moveToObject(bullet, this.target);
+        this.bulletTime = game.time.now + 600;
       }
     }
   }
-  track(target) {
+  track(target, distance) {
+    if (this.target && game.physics.arcade.distanceBetween(this.base, this.target) < distance) {
+      return;
+    }
     this.target = target;
   }
   update() {
@@ -50,7 +51,7 @@ class Turret {
     }
     this.gun.rotation = game.physics.arcade.angleBetween(this.gun, this.target);
 
-    if (game.physics.arcade.distanceBetween(this.base, this.target) < 24) {
+    if (game.physics.arcade.distanceBetween(this.base, this.target) < 26) {
       this.fire();
     }
   }
