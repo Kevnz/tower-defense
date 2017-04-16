@@ -1,0 +1,52 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/kevinisom/.nvm/versions/node/v6.9.5/bin/node',
+1 verbose cli   '/Users/kevinisom/.nvm/versions/node/v6.9.5/bin/npm',
+1 verbose cli   'run',
+1 verbose cli   'dev' ]
+2 info using npm@3.10.10
+3 info using node@v6.9.5
+4 verbose run-script [ 'predev', 'dev', 'postdev' ]
+5 info lifecycle towerd@1.0.0~predev: towerd@1.0.0
+6 verbose lifecycle towerd@1.0.0~predev: unsafe-perm in lifecycle true
+7 verbose lifecycle towerd@1.0.0~predev: PATH: /Users/kevinisom/.nvm/versions/node/v6.9.5/lib/node_modules/npm/bin/node-gyp-bin:/Users/kevinisom/Projects/gamedev/towerd/node_modules/.bin:/Users/kevinisom/.pyenv/plugins/pyenv-virtualenv/shims:/Users/kevinisom/.pyenv/shims:/usr/local/texlive/2016/bin/x86_64-darwin/:/Applications/Postgres.app/Contents/Versions/9.6/bin/:/Users/kevinisom/.pyenv/bin:/Users/kevinisom/.nvm/versions/node/v6.9.5/bin:/Users/kevinisom/.npm-packages/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/kevinisom/.nvm/versions/node/v6.9.5/bin
+8 verbose lifecycle towerd@1.0.0~predev: CWD: /Users/kevinisom/Projects/gamedev/towerd
+9 silly lifecycle towerd@1.0.0~predev: Args: [ '-c', 'cp -a -R  ./assets ./dist; cp -a index.html ./dist/' ]
+10 silly lifecycle towerd@1.0.0~predev: Returned: code: 0  signal: null
+11 info lifecycle towerd@1.0.0~dev: towerd@1.0.0
+12 verbose lifecycle towerd@1.0.0~dev: unsafe-perm in lifecycle true
+13 verbose lifecycle towerd@1.0.0~dev: PATH: /Users/kevinisom/.nvm/versions/node/v6.9.5/lib/node_modules/npm/bin/node-gyp-bin:/Users/kevinisom/Projects/gamedev/towerd/node_modules/.bin:/Users/kevinisom/.pyenv/plugins/pyenv-virtualenv/shims:/Users/kevinisom/.pyenv/shims:/usr/local/texlive/2016/bin/x86_64-darwin/:/Applications/Postgres.app/Contents/Versions/9.6/bin/:/Users/kevinisom/.pyenv/bin:/Users/kevinisom/.nvm/versions/node/v6.9.5/bin:/Users/kevinisom/.npm-packages/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/kevinisom/.nvm/versions/node/v6.9.5/bin
+14 verbose lifecycle towerd@1.0.0~dev: CWD: /Users/kevinisom/Projects/gamedev/towerd
+15 silly lifecycle towerd@1.0.0~dev: Args: [ '-c', 'webpack-dev-server --hot --content-base dist/' ]
+16 silly lifecycle towerd@1.0.0~dev: Returned: code: 1  signal: null
+17 info lifecycle towerd@1.0.0~dev: Failed to exec dev script
+18 verbose stack Error: towerd@1.0.0 dev: `webpack-dev-server --hot --content-base dist/`
+18 verbose stack Exit status 1
+18 verbose stack     at EventEmitter.<anonymous> (/Users/kevinisom/.nvm/versions/node/v6.9.5/lib/node_modules/npm/lib/utils/lifecycle.js:255:16)
+18 verbose stack     at emitTwo (events.js:106:13)
+18 verbose stack     at EventEmitter.emit (events.js:191:7)
+18 verbose stack     at ChildProcess.<anonymous> (/Users/kevinisom/.nvm/versions/node/v6.9.5/lib/node_modules/npm/lib/utils/spawn.js:40:14)
+18 verbose stack     at emitTwo (events.js:106:13)
+18 verbose stack     at ChildProcess.emit (events.js:191:7)
+18 verbose stack     at maybeClose (internal/child_process.js:877:16)
+18 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
+19 verbose pkgid towerd@1.0.0
+20 verbose cwd /Users/kevinisom/Projects/gamedev/towerd
+21 error Darwin 16.5.0
+22 error argv "/Users/kevinisom/.nvm/versions/node/v6.9.5/bin/node" "/Users/kevinisom/.nvm/versions/node/v6.9.5/bin/npm" "run" "dev"
+23 error node v6.9.5
+24 error npm  v3.10.10
+25 error code ELIFECYCLE
+26 error towerd@1.0.0 dev: `webpack-dev-server --hot --content-base dist/`
+26 error Exit status 1
+27 error Failed at the towerd@1.0.0 dev script 'webpack-dev-server --hot --content-base dist/'.
+27 error Make sure you have the latest version of node.js and npm installed.
+27 error If you do, this is most likely a problem with the towerd package,
+27 error not with npm itself.
+27 error Tell the author that this fails on your system:
+27 error     webpack-dev-server --hot --content-base dist/
+27 error You can get information on how to open an issue for this project with:
+27 error     npm bugs towerd
+27 error Or if that isn't available, you can get their info via:
+27 error     npm owner ls towerd
+27 error There is likely additional logging output above.
+28 verbose exit [ 1, true ]

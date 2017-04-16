@@ -1,0 +1,34 @@
+{
+  "name": "towerd",
+  "version": "1.0.0",
+  "description": "Tower Defense Game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predev": "cp -a -R  ./assets ./dist; cp -a index.html ./dist/",
+    "dev": "webpack-dev-server --hot --content-base dist/"
+  },
+  "author": "Kevin Isom<kevin.isom@gmail.com>",
+  "license": "Unlicense",
+  "dependencies": {
+    "phaser-ce": "^2.7.6",
+    "webfontloader": "^1.6.27"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^6.4.1",
+    "babel-plugin-transform-function-bind": "^6.22.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2016": "^6.24.1",
+    "babel-preset-es2017": "^6.24.1",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3",
+    "expose-loader": "^0.7.3",
+    "webpack": "^2.3.3",
+    "webpack-dev-server": "^2.4.2"
+  }
+}

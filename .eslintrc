@@ -1,0 +1,18 @@
+{
+  "env": {
+    "browser": false,
+    "node": true,
+    "mocha": true
+  },
+  "extends": [
+    "eslint-config-airbnb-base"
+    ],
+  "globals": {
+    "game": true,
+    "Phaser": true
+  },
+  "rules" : {
+    "comma-dangle": "off",
+    "no-param-reassign": "off"
+  }
+}
