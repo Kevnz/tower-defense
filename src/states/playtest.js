@@ -12,8 +12,8 @@ const turrets = [];
 let enemy;
 let bullets;
 
-const addTile = function (x, y) {
-  const b = blocks.create(x * game.globals.TILE_SIZE, game.globals.TILE_SIZE * (y), 'tiles', 'greenbrick.png');
+const addTile = (x, y) => {
+  const b = blocks.create(x * game.globals.TILE_SIZE, game.globals.TILE_SIZE * (y), 'tiles', 'greenbrick');
   b.body.immovable = true;
 };
 
@@ -118,7 +118,7 @@ module.exports = {
     turrets.push(new Turret(4, 4, bullets));
     turrets.push(new Turret(1, 5, bullets));
     turrets.push(new Turret(5, 7, bullets));
-    turrets.push(new Turret(8, 5, bullets));
+    turrets.push(new Turret(6, 5, bullets));
   },
   update() {
     game.physics.arcade.overlap(bullets, enemies, (b, e) => {
@@ -130,8 +130,9 @@ module.exports = {
     }, null, this);
     enemies.forEach((each) => {
       turrets.forEach((turret) => {
-        if (distanceBetween(turret.base, each) < 30) {
-          turret.track(each);
+        const dist = distanceBetween(turret.base, each);
+        if (dist < 45) {
+          turret.track(each, dist);
         }
       });
     });
