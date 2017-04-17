@@ -1,11 +1,11 @@
 require('./plugins/pathfinder');
 
-const width = 20 * 16;
-const height = 10 * 16;
+const width = 20 * 64;
+const height = 10 * 64;
 window.game = new Phaser.Game(width, height, Phaser.AUTO);
 
 game.globals = {
-  TILE_SIZE: 16,
+  TILE_SIZE: 64,
   WIDTH: 20,
   HEIGHT: 10,
   LEVEL: 'level-1',
