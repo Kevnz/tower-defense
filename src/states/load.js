@@ -18,7 +18,8 @@ module.exports = {
     //Add here all the assets that you need to game.load
     this.load.spritesheet('tiles', 'assets/faux_tiles.png', 16, 16);
     this.load.text('level-1', 'assets/levels/1.txt');
-    this.load.atlasJSONHash('tiles', 'assets/tiles.png', 'assets/tiles.json');
+    this.load.atlasJSONHash('tiles_old', 'assets/tiles.png', 'assets/tiles.json');
+    this.load.atlasJSONHash('tiles', 'assets/tower.png', 'assets/tower.json');
     this.load.image('footman', 'assets/td-footman.png');
     this.load.image('turret_base', 'assets/turret_base.png');
     this.load.image('turret_top', 'assets/turret_top.png');
