@@ -13,12 +13,12 @@ let enemy;
 let bullets;
 let placements = 8;
 const addTile = (x, y) => {
-  const b = blocks.create(x * game.globals.TILE_SIZE, game.globals.TILE_SIZE * (y), 'tiles', 'greenbrick');
+  const b = blocks.create(x * game.globals.TILE_SIZE, game.globals.TILE_SIZE * (y), 'tiles', 'tile124');
   b.body.immovable = true;
   b.inputEnabled = true;
   b.events.onInputUp.add((ev) => {
-    const xGrid = ev.x / 16;
-    const yGrid = ev.y / 16;
+    const xGrid = ev.x / game.globals.TILE_SIZE;
+    const yGrid = ev.y / game.globals.TILE_SIZE;
     if (placements >= 0) {
       turrets.push(new Turret(xGrid, yGrid, bullets));
       placements -= 1;
@@ -33,6 +33,10 @@ const addBase = (x, y) => {
 
 };
 
+const addRoad = (x, y) => {
+  //.tint = Math.random() * 0xffffff;
+  const b = game.add.sprite(x * game.globals.TILE_SIZE, y * game.globals.TILE_SIZE, 'tiles', 'tile159');
+};
 const buildMap = () => {
   const l1 = game.cache.getText(game.globals.LEVEL);
   let rows = l1.split('\r\n');
@@ -48,11 +52,12 @@ const buildMap = () => {
       } else if (cell === 'E') {
         newRow.push(0);
         endingPoint = { x: rowIndex, y: index };
-        addBase(rowIndex, index)
+        addBase(rowIndex, index);
       } else if (cell === 'S') {
         newRow.push(0);
         startingPoint = { x: rowIndex, y: index };
       } else {
+        addRoad(rowIndex, index);
         newRow.push(0);
       }
     });
@@ -70,8 +75,8 @@ const buildEnemyMove = function (actor) {
   const move = game.add.tween(actor);
   const pathKeys = Object.keys(path);
   pathKeys.forEach((pathNode) => {
-    const x = path[pathNode][0] * 16 || path[pathNode].x * 16;
-    const y = path[pathNode][1] * 16 || path[pathNode].y * 16;
+    const x = path[pathNode][0] * game.globals.TILE_SIZE || path[pathNode].x * game.globals.TILE_SIZE;
+    const y = path[pathNode][1] * game.globals.TILE_SIZE || path[pathNode].y * game.globals.TILE_SIZE;
     move.to({ x, y }, 1800, Phaser.Easing.Linear.None);
   });
 
@@ -149,7 +154,7 @@ module.exports = {
     enemies.forEach((each) => {
       turrets.forEach((turret) => {
         const dist = distanceBetween(turret.base, each);
-        if (dist < 45) {
+        if (dist < game.globals.TILE_SIZE * 2) {
           turret.track(each, dist);
         }
       });
